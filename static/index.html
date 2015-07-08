@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fetcherApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetcher</title>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+<h3>Fetcher test</h3>
+
+<div ng-controller="postsCtrl">
+    <h4>Settings</h4>
+
+    <label for="period">Period: </label>
+    <input id="period" ng-model="settings.period" ng-change="postSettings()"/><br>
+    <br>
+    <button ng-click="isStarted?stopFetcher():startFetcher()">{{isStarted?'Stop':'Start'}}</button>
+    <h4>News</h4>
+    <button ng-click="getPosts()">Refresh</button>
+    <ul ng-repeat="post in posts">
+        <li>
+            <a href="{{post.url.href}}" target="_blank"><img ng-src="{{post.image.src}}"/><br>{{post.url.text}}</a>
+            <br>Author: {{post.author.content}}
+            <br>({{post.dateCreated.text}})
+        </li>
+    </ul>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "fetcher",
+  "version": "1.0.0",
+  "description": "simple fetcher",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Nikita Lvov",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.8.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-less": "^0.1.7"
+  },
+  "dependencies": {
+    "angular": "^1.4.2",
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "lodash": "^3.10.0",
+    "repeat": "0.0.6",
+    "request": "^2.58.0",
+    "semantic-schema-parser": "^0.1.0"
+  }
+}
